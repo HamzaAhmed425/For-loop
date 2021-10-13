@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ .inpt{
+border-color: black;
+width: 100px; 
+height: 30px;
+ }  
+
+ .bt{
+     width: 80px;
+     height: 40px;
+     border-radius: 20px;
+     margin-left: 10px;
+ }
+
+ .rim{
+     
+     border: solid #244624;
+     padding: 13px;
+     
+     border-radius: 20px;
+     display: inline-block;
+ }
+
+ .pt{
+     border: 1px;
+      margin-left: 15px;
+     margin-right: 15px;
+     margin-top: 3px;
+     margin-bottom: 3px;
+
+ }
+
+</style>
+<body >
+    <h1 style="margin-left: 10px;"> Tables</h1>
+    <div class="rim">
+        <input type="text" class="inpt" id="numb" name="numbers" placeholder="Enter number">
+        <br><br>
+        <input type="button" class="bt" onclick="ptable()" value="click">
+    </div>
+    <br><br><br>
+    <table style="border: 1px solid; " >
+        <tr>
+            <td>
+                <p id="tb" class="pt">See  Result Here</p>
+            </td>
+        </tr>
+    </table>
+    
+
+    <script>
+
+         function ptable(){
+             document.getElementById('tb').innerHTML="";
+             var num;
+             num=document.getElementById('numb').value;
+             for(var i=1; i<=10; i++)
+             {
+               if(num==""){document.getElementById('tb').innerHTML="Result";}
+               else{document.getElementById('tb').innerHTML+=num+"x"+i+"="+(num*i)+"<br>";}
+             } 
+         }
+         </script>
+</body>
+</html>
